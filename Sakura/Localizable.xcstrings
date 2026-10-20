@@ -1,0 +1,1290 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ wants these permissions: %@" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ pieprasa atļaujas: %2$@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ запрашивает разрешения: %2$@"
+          }
+        }
+      }
+    },
+    "%@ wants to read and change: %@" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ vēlas lasīt un mainīt: %2$@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ хочет читать и изменять: %2$@"
+          }
+        }
+      }
+    },
+    "About" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par programmu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О программе"
+          }
+        }
+      }
+    },
+    "Actual Size" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faktiskais izmērs"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Реальный размер"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pievienot"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить"
+          }
+        }
+      }
+    },
+    "Add Favorite" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pievienot izlasei"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить в избранное"
+          }
+        }
+      }
+    },
+    "Add to Favorites" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pievienot izlasei"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить в избранное"
+          }
+        }
+      }
+    },
+    "Address" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adrese"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес"
+          }
+        }
+      }
+    },
+    "Allow" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atļaut"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешить"
+          }
+        }
+      }
+    },
+    "An extension" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paplašinājums"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Расширение"
+          }
+        }
+      }
+    },
+    "Analytics and ad trackers don't load. Sakura keeps no history either." : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Analītikas un reklāmu izsekotāji netiek ielādēti. Sakura arī neglabā vēsturi."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аналитика и рекламные трекеры не загружаются. Историю Sakura тоже не хранит."
+          }
+        }
+      }
+    },
+    "Appearance" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izskats"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оформление"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atpakaļ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назад"
+          }
+        }
+      }
+    },
+    "Block Trackers" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloķēt izsekotājus"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Блокировать трекеры"
+          }
+        }
+      }
+    },
+    "Can't Open This Page" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nevar atvērt šo lapu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удаётся открыть страницу"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atcelt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
+          }
+        }
+      }
+    },
+    "Choose a passwords CSV exported from Apple Passwords, Chrome, or similar." : {
+      "comment" : "Title of the file chooser when importing a CSV of saved passwords.",
+      "isCommentAutoGenerated" : true
+    },
+    "Choose the folder that contains the extension's manifest.json" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izvēlieties mapi, kurā ir paplašinājuma manifest.json"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите папку, в которой лежит manifest.json расширения"
+          }
+        }
+      }
+    },
+    "Clear" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caurspīdīgs"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прозрачное"
+          }
+        }
+      }
+    },
+    "Close Tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aizvērt cilni"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть вкладку"
+          }
+        }
+      }
+    },
+    "Close this tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aizvērt šo cilni"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть вкладку"
+          }
+        }
+      }
+    },
+    "Copy Link" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopēt saiti"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопировать ссылку"
+          }
+        }
+      }
+    },
+    "Counted on the pages you open; requests a page makes without an element on it aren't seen" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skaitīts atvērtajās lapās; pieprasījumi bez elementa lapā nav redzami"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Считается на открытых страницах; запросы без элемента на странице не видны"
+          }
+        }
+      }
+    },
+    "Dark" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tumšs"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тёмное"
+          }
+        }
+      }
+    },
+    "Don't Allow" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neatļaut"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не разрешать"
+          }
+        }
+      }
+    },
+    "Edit Favorite" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rediģēt izlasi"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменить избранное"
+          }
+        }
+      }
+    },
+    "Edit…" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rediģēt…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменить…"
+          }
+        }
+      }
+    },
+    "English" : {
+      "shouldTranslate" : false
+    },
+    "Extensions" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paplašinājumi"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Расширения"
+          }
+        }
+      }
+    },
+    "Failed to Load" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neizdevās ielādēt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не загрузились"
+          }
+        }
+      }
+    },
+    "Favorites" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izlase"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Избранное"
+          }
+        }
+      }
+    },
+    "Forward" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uz priekšu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вперёд"
+          }
+        }
+      }
+    },
+    "General" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vispārīgi"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основные"
+          }
+        }
+      }
+    },
+    "Glass" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stikls"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стекло"
+          }
+        }
+      }
+    },
+    "Go back" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doties atpakaļ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назад"
+          }
+        }
+      }
+    },
+    "Go forward" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doties uz priekšu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вперёд"
+          }
+        }
+      }
+    },
+    "Hide Sidebar" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slēpt sānjoslu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть боковую панель"
+          }
+        }
+      }
+    },
+    "Hide password" : {
+      "comment" : "A button that hides the password.",
+      "isCommentAutoGenerated" : true
+    },
+    "History" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vēsture"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "История"
+          }
+        }
+      }
+    },
+    "Homepage" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sākumlapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Домашняя страница"
+          }
+        }
+      }
+    },
+    "Import" : {
+      "comment" : "Button title to import a CSV file.",
+      "isCommentAutoGenerated" : true
+    },
+    "Import a passwords CSV exported from Apple Passwords, Chrome, and others" : {
+      "comment" : "A description of the CSV format of a password list.",
+      "isCommentAutoGenerated" : true
+    },
+    "Import from CSV…" : {
+      "comment" : "A button that imports a CSV of saved passwords.",
+      "isCommentAutoGenerated" : true
+    },
+    "Imported %lld, skipped %lld." : {
+      "comment" : "A message that shows the number of passwords imported and skipped during the import process. The first argument is the number of passwords imported. The second argument is the number of passwords skipped.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Imported %1$lld, skipped %2$lld."
+          }
+        }
+      }
+    },
+    "Language" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valoda"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "Latviešu" : {
+      "shouldTranslate" : false
+    },
+    "Light" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gaišs"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Светлое"
+          }
+        }
+      }
+    },
+    "Liquid Glass" : {
+      "shouldTranslate" : false
+    },
+    "Load Extension" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ielādēt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить"
+          }
+        }
+      }
+    },
+    "Load Unpacked Extension…" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ielādēt neiepakotu paplašinājumu…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить распакованное расширение…"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nosaukums"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название"
+          }
+        }
+      }
+    },
+    "Never for This Website" : {
+      "comment" : "Button title to stop showing this website's password in the future.",
+      "isCommentAutoGenerated" : true
+    },
+    "New Tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jauna cilne"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новая вкладка"
+          }
+        }
+      }
+    },
+    "No Saved Passwords" : {
+      "comment" : "A label displayed when the user has no saved passwords.",
+      "isCommentAutoGenerated" : true
+    },
+    "No username" : {
+      "comment" : "A placeholder to display when a user's username is not set.",
+      "isCommentAutoGenerated" : true
+    },
+    "Not Now" : {
+      "comment" : "Button title for dismissing the alert without saving the password.",
+      "isCommentAutoGenerated" : true
+    },
+    "OK" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Labi"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "Off: the classic look, like macOS Sequoia." : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izslēgts: klasiskais izskats, kā macOS Sequoia."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключено: классический вид, как в macOS Sequoia."
+          }
+        }
+      }
+    },
+    "Open Location…" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atvērt adresi…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть адрес…"
+          }
+        }
+      }
+    },
+    "Open a new tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atvērt jaunu cilni"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть новую вкладку"
+          }
+        }
+      }
+    },
+    "Open in New Tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atvērt jaunā cilnē"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть в новой вкладке"
+          }
+        }
+      }
+    },
+    "Password for %@" : {
+      "comment" : "A label below a username in a saved login.",
+      "isCommentAutoGenerated" : true
+    },
+    "Passwords" : {
+      "comment" : "A label for the passwords settings tab.",
+      "isCommentAutoGenerated" : true
+    },
+    "Passwords you save while browsing appear here. You can also import a CSV." : {
+      "comment" : "A description of the content of the passwords list.",
+      "isCommentAutoGenerated" : true
+    },
+    "Reload" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pārlādēt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить"
+          }
+        }
+      }
+    },
+    "Reload Page" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pārlādēt lapu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить страницу"
+          }
+        }
+      }
+    },
+    "Reload this page" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pārlādēt šo lapu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить страницу"
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noņemt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
+          }
+        }
+      }
+    },
+    "Remove this password" : {
+      "comment" : "A button that removes a password.",
+      "isCommentAutoGenerated" : true
+    },
+    "Restart Now" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restartēt tagad"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перезапустить"
+          }
+        }
+      }
+    },
+    "Restart Sakura to change the language." : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restartējiet Sakura, lai mainītu valodu."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перезапустите Sakura, чтобы сменить язык."
+          }
+        }
+      }
+    },
+    "Sakura" : {
+      "shouldTranslate" : false
+    },
+    "Sakura Homepage" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sakura sākumlapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Домашняя страница Sakura"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saglabāt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
+          }
+        }
+      }
+    },
+    "Save Password" : {
+      "comment" : "Button title to save a password.",
+      "isCommentAutoGenerated" : true
+    },
+    "Save this password for %@?" : {
+      "comment" : "The text of a button that updates a saved password.",
+      "isCommentAutoGenerated" : true
+    },
+    "Search Engine" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meklētājprogramma"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поисковик"
+          }
+        }
+      }
+    },
+    "Search or enter website name" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meklēt vai ievadīt vietnes nosaukumu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск или адрес сайта"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iestatījumi"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "Settings…" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iestatījumi…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки…"
+          }
+        }
+      }
+    },
+    "Show Next Tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rādīt nākamo cilni"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следующая вкладка"
+          }
+        }
+      }
+    },
+    "Show Previous Tab" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rādīt iepriekšējo cilni"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предыдущая вкладка"
+          }
+        }
+      }
+    },
+    "Show Sidebar" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rādīt sānjoslu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать боковую панель"
+          }
+        }
+      }
+    },
+    "Show password" : {
+      "comment" : "A button that reveals a password.",
+      "isCommentAutoGenerated" : true
+    },
+    "Stop" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apturēt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остановить"
+          }
+        }
+      }
+    },
+    "Stop loading this page" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apturēt lapas ielādi"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остановить загрузку страницы"
+          }
+        }
+      }
+    },
+    "System" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kā sistēmā"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как в системе"
+          }
+        }
+      }
+    },
+    "Tinted" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tonēts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тонированное"
+          }
+        }
+      }
+    },
+    "Tracker blocking is off" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izsekotāju bloķēšana izslēgta"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Блокировка трекеров выключена"
+          }
+        }
+      }
+    },
+    "Trackers blocked" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloķēti izsekotāji"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заблокировано трекеров"
+          }
+        }
+      }
+    },
+    "Try Again" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mēģināt vēlreiz"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повторить"
+          }
+        }
+      }
+    },
+    "Type an address or a search in the sidebar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ievadiet adresi vai meklējumu sānjoslā"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите адрес или запрос в боковой панели"
+          }
+        }
+      }
+    },
+    "Update Password" : {
+      "comment" : "Button title for updating a saved password.",
+      "isCommentAutoGenerated" : true
+    },
+    "Update the saved password for %@?" : {
+      "comment" : "A title for a dialog that asks the user whether to update an existing password. The argument is the host name.",
+      "isCommentAutoGenerated" : true
+    },
+    "Version %@" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versija %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия %@"
+          }
+        }
+      }
+    },
+    "Zoom In" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuvināt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увеличить"
+          }
+        }
+      }
+    },
+    "Zoom Out" : {
+      "localizations" : {
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tālināt"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уменьшить"
+          }
+        }
+      }
+    },
+    "Русский" : {
+      "shouldTranslate" : false
+    }
+  },
+  "version" : "1.1"
+}
