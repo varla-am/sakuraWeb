@@ -10,7 +10,7 @@
 
 ## Functions:
 **🌸 Sakura Sidebar** -- Sidebar like in Arc.\
-**⚙️ Sakura TrackerBlock** -- Blocker that blocks trackers, like in Safari.\
+**⚙️ Sakura TrackerBlock** -- Function that blocks trackers, like in Safari.\
 **🧩 Safari WebExtensions support** -- Sakura supports WebExtensions from Safari.\
 **🔑 Sakura PassMan** -- Password manager that supports AutoFill and CSV import from Apple Keychain/Chrome.\
 **🛡️ Privacy** -- Sakura does not store your surfing history.
