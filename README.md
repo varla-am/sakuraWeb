@@ -21,6 +21,7 @@
 - **macOS:** 26 Tahoe or newer
 - **Mac:** Apple Silicon or Intel
 - **Building from source:** Xcode 26 or newer
+- **TeamID issue while building:** Project will not build with my _TeamID_, change it in _Signing & Capabilities_ in Xcode.
 
 ## Installation
 
