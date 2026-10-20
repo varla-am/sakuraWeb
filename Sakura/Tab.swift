@@ -162,7 +162,10 @@ extension Tab: WKNavigationDelegate {
 
 extension Tab: WKUIDelegate {
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for action: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        browser?.newTab(configuration: configuration).webView
+        // WebKit hands the pop-up the opener's content controller; the new tab adds its own
+        // message handlers, and adding a name the controller already has throws
+        configuration.userContentController = WKUserContentController()
+        return browser?.newTab(configuration: configuration).webView
     }
 
     func webViewDidClose(_ webView: WKWebView) {
