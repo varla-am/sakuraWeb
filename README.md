@@ -25,7 +25,7 @@
 
 ## Installation
 
-1. Download `Sakura-v1.0.dmg` from [Releases](https://github.com/varla-am/sakuraWeb/releases).
+1. Download `Sakura-v1.0.1.dmg` from [Releases](https://github.com/varla-am/sakuraWeb/releases).
 2. Open it and drag **Sakura** into **Applications**.
 3. On first launch Gatekeeper may block Sakura because it isn't notarized.
    Open **System Settings → Privacy & Security** and click **Open Anyway**.
