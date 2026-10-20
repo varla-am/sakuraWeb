@@ -29,7 +29,6 @@
 2. Open it and drag **Sakura** into **Applications**.
 3. On first launch Gatekeeper may block Sakura because it isn't notarized.
    Open **System Settings → Privacy & Security** and click **Open Anyway**.
-4. App has examples in it. In passwords you can see _test.example.net_, In extensions you can see TestExtension, unload it in Safari settings.
 
 <img width="1135" height="759" alt="Minimized-Window" src="https://github.com/user-attachments/assets/0a0ada75-52a0-41b0-8db1-69d4992842d3" />
 <img width="1470" height="926" alt="FullScreen-Window" src="https://github.com/user-attachments/assets/44c1d058-46e3-4e1d-a4d8-37e998001acd" />
