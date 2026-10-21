@@ -1,4 +1,5 @@
 import AppKit
+import UniformTypeIdentifiers
 import WebKit
 
 /// One browser window: its tabs and which one is in front
@@ -76,9 +77,11 @@ final class Browser: NSObject, ObservableObject {
         return tab
     }
 
-    /// Shows a site: its tab if one is open, else the empty tab in front, else a new tab
+    /// Shows a site or a Sakura page: its tab if one is open, else the empty tab in front, else a new tab
     func show(_ url: URL) {
-        if let tab = tabs.first(where: { $0.url?.host() == url.host() }) {
+        if let page = SakuraPage(url), let tab = tabs.first(where: { $0.page == page }) {
+            selectedID = tab.id
+        } else if SakuraPage(url) == nil, let tab = tabs.first(where: { $0.page == nil && $0.url?.host() == url.host() }) {
             selectedID = tab.id
         } else if let selected, selected.webView.url == nil {
             selected.load(url)
@@ -87,6 +90,26 @@ final class Browser: NSObject, ObservableObject {
             selectedID = tab.id
             tab.load(url)
         }
+    }
+
+    /// Opens a file from disk (⌘O, Finder's Open With): in the empty tab in front, else a new tab
+    func openFile(_ file: URL) {
+        if let selected, selected.webView.url == nil, selected.page == nil, selected.missingPage == nil {
+            selected.load(file)
+        } else {
+            let tab = newTab(select: false)
+            selectedID = tab.id
+            tab.load(file)
+        }
+    }
+
+    func chooseFiles() {
+        let panel = NSOpenPanel()
+        panel.allowedContentTypes = [.html] + [UTType("public.xhtml")].compactMap { $0 }
+        panel.allowsMultipleSelection = true
+        panel.prompt = String(localized: "Open")
+        guard panel.runModal() == .OK else { return }
+        panel.urls.forEach(openFile)
     }
 
     func close(_ tab: Tab) {

@@ -87,11 +87,11 @@ private struct NavigationButtons: View {
 
     var body: some View {
         HStack(spacing: 0) {
-            Button { tab.webView.goBack() } label: { Label("Back", systemImage: "chevron.left") }
-                .disabled(!tab.canGoBack)
+            Button { tab.goBack() } label: { Label("Back", systemImage: "chevron.left") }
+                .disabled(!tab.canNavigateBack)
                 .help("Go back")
-            Button { tab.webView.goForward() } label: { Label("Forward", systemImage: "chevron.right") }
-                .disabled(!tab.canGoForward)
+            Button { tab.goForward() } label: { Label("Forward", systemImage: "chevron.right") }
+                .disabled(!tab.canNavigateForward)
                 .help("Go forward")
             Button { tab.reloadOrStop() } label: {
                 Label(tab.isLoading ? "Stop" : "Reload", systemImage: tab.isLoading ? "xmark" : "arrow.clockwise")
@@ -137,18 +137,20 @@ private struct AddressField: View {
     @FocusState private var isFocused: Bool
 
     private var fullURL: String {
-        guard let url = tab.url, url.absoluteString != "about:blank" else { return "" }
+        guard let url = tab.address, url.absoluteString != "about:blank" else { return "" }
         return url.absoluteString
     }
 
-    /// Just the site name while not editing, like Arc and Safari
+    /// Just the site name while not editing, like Arc and Safari; a Sakura page keeps its whole address
     private var shownText: String {
-        guard let host = tab.url?.host() else { return fullURL }
+        guard tab.page == nil, let host = tab.url?.host() else { return fullURL }
         return host.hasPrefix("www.") ? String(host.dropFirst(4)) : host
     }
 
     private var icon: String {
-        guard let url = tab.url, !isFocused else { return "magnifyingglass" }
+        guard !isFocused else { return "magnifyingglass" }
+        if let page = tab.page { return page.symbol }
+        guard let url = tab.url else { return "magnifyingglass" }
         return url.scheme == "https" ? "lock.fill" : "globe"
     }
 
@@ -176,17 +178,37 @@ private struct AddressField: View {
         .onAppear {
             text = shownText
             // A fresh tab starts with the cursor in the address bar
-            if tab.webView.url == nil { DispatchQueue.main.async { isFocused = true } }
+            if tab.webView.url == nil, tab.page == nil { DispatchQueue.main.async { isFocused = true } }
         }
-        .onChange(of: tab.url) {
+        .onChange(of: tab.address) {
+            // Something opened a page (a file from Finder, a favorite) while the empty bar waited for typing
+            if isFocused, text.isEmpty { isFocused = false }
             if !isFocused { text = shownText }
+        }
+        // Opening a Sakura page (⇧⌘E) leaves the address bar, so it shows the page's address
+        .onChange(of: tab.page) {
+            isFocused = false
+            text = shownText
         }
         .onChange(of: isFocused) {
             // Editing shows the full address, leaving shows the site name again
             text = isFocused ? fullURL : shownText
+            // Like Safari: clicking into a filled address bar selects all of it, ready to type over
+            if isFocused, !text.isEmpty { Self.selectAllAfterClick() }
         }
         .onChange(of: browser.addressFocusRequest) {
             isFocused = true
+        }
+    }
+
+    /// The click puts the cursor where the mouse comes up, so the selection waits until the button is released
+    private static func selectAllAfterClick() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
+            if NSEvent.pressedMouseButtons != 0 {
+                selectAllAfterClick()
+            } else {
+                NSApp.sendAction(#selector(NSText.selectAll(_:)), to: nil, from: nil)
+            }
         }
     }
 }
@@ -204,7 +226,13 @@ private struct TabRow: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            Favicon(url: tab.favicon)
+            if let page = tab.page {
+                Image(systemName: page.symbol)
+                    .foregroundStyle(Color.accentColor)
+                    .frame(width: 16, height: 16)
+            } else {
+                Favicon(url: tab.favicon)
+            }
             Text(tab.displayTitle)
                 .lineLimit(1)
                 .font(.system(size: 13))
@@ -235,16 +263,16 @@ private struct TabRow: View {
         .contentShape(RoundedRectangle(cornerRadius: 9))
         .onTapGesture { browser.selectedID = tab.id }
         .onHover { isHovered = $0 }
-        .help(tab.url?.absoluteString ?? tab.displayTitle)
+        .help(tab.address?.absoluteString ?? tab.displayTitle)
         .contextMenu {
             Button("Copy Link") {
-                guard let url = tab.url else { return }
+                guard let url = tab.address else { return }
                 NSPasteboard.general.clearContents()
                 NSPasteboard.general.setString(url.absoluteString, forType: .string)
             }
-            .disabled(tab.url == nil)
+            .disabled(tab.address == nil)
             Button("Add to Favorites") { Favorites.shared.add(tab) }
-                .disabled(tab.url == nil || Favorites.shared.contains(tab.url))
+                .disabled(tab.page != nil || tab.url == nil || Favorites.shared.contains(tab.url))
             Divider()
             Button("Close Tab") { browser.close(tab) }
         }

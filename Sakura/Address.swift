@@ -9,8 +9,14 @@ enum Address {
         let text = input.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { return nil }
 
-        if let url = URL(string: text), let scheme = url.scheme?.lowercased(), webSchemes.contains(scheme) {
+        if let url = URL(string: text), let scheme = url.scheme?.lowercased(),
+           webSchemes.contains(scheme) || scheme == SakuraPage.scheme {
             return url
+        }
+        // A file on this Mac: /Users/…/page.html or ~/page.html
+        if text.hasPrefix("/") || text.hasPrefix("~/") {
+            let path = (text as NSString).expandingTildeInPath
+            if FileManager.default.fileExists(atPath: path) { return URL(fileURLWithPath: path) }
         }
         if !text.contains(" "), text.contains(".") || text.hasPrefix("localhost") {
             let scheme = text.hasPrefix("localhost") ? "http://" : "https://"

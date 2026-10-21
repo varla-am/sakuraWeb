@@ -37,10 +37,12 @@ struct StartPage: View {
         }
         .scrollIndicators(.never)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        // Opaque, so a website under sakura://homepage doesn't show through
         .background(
             LinearGradient(colors: [Color.accentColor.opacity(0.18), Color(nsColor: .textBackgroundColor)],
                            startPoint: .top, endPoint: .bottom)
         )
+        .background(Color(nsColor: .textBackgroundColor))
     }
 }
 

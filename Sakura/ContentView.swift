@@ -68,6 +68,12 @@ struct BrowserWindow: View {
         .background(WindowReader(browser: browser))
         .environmentObject(browser)
         .focusedSceneObject(browser)
+        // HTML files from Finder (Open With, a double-click, the Dock icon) open as tabs in this window,
+        // instead of SwiftUI making a new window for each
+        .handlesExternalEvents(preferring: ["*"], allowing: ["*"])
+        .onOpenURL { url in
+            if url.isFileURL { browser.openFile(url) }
+        }
     }
 }
 
@@ -93,13 +99,18 @@ private struct TabPage: View {
     var body: some View {
         ZStack(alignment: .top) {
             WebView(tab: tab)
-            if tab.url == nil, !tab.isLoading {
-                StartPage { tab.load($0) }
+            switch tab.shownPage {
+            case .homepage: StartPage { tab.load($0) }
+            case .extensions: ExtensionsPage()
+            case nil: EmptyView()
             }
             if let error = tab.error {
                 ErrorPage(message: error) { tab.retry() }
             }
-            if tab.isLoading {
+            if let missing = tab.missingPage {
+                MissingPage(address: missing.absoluteString) { tab.load(SakuraPage.homepage.url) }
+            }
+            if tab.isLoading, tab.page == nil, tab.missingPage == nil {
                 ProgressBar(progress: tab.progress)
             }
         }
@@ -132,6 +143,26 @@ private struct ErrorPage: View {
         } actions: {
             Button("Try Again", action: retry)
                 .keyboardShortcut(.defaultAction)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(nsColor: .textBackgroundColor))
+    }
+}
+
+/// sakura://something that Sakura doesn't have
+private struct MissingPage: View {
+    let address: String
+    let goHome: () -> Void
+
+    var body: some View {
+        ContentUnavailableView {
+            Label("No such Sakura page", systemImage: "questionmark.square.dashed")
+        } description: {
+            Text("\(address) isn't one of Sakura's pages. Try sakura://homepage or sakura://extensions.")
+        } actions: {
+            // No Return shortcut: Return belongs to the address bar, which often has focus here
+            Button("Open Homepage", action: goHome)
+                .buttonStyle(.borderedProminent)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(nsColor: .textBackgroundColor))

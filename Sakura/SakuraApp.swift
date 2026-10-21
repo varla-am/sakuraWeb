@@ -41,6 +41,8 @@ private struct BrowserCommands: Commands {
                 .keyboardShortcut("t")
             Button("Open Location…") { browser?.focusAddress() }
                 .keyboardShortcut("l")
+            Button("Open File…") { browser?.chooseFiles() }
+                .keyboardShortcut("o")
             Button("Close Tab") { browser?.closeSelected() }
                 .keyboardShortcut("w")
         }
@@ -68,9 +70,9 @@ private struct BrowserCommands: Commands {
         }
 
         CommandMenu("History") {
-            Button("Back") { tab?.webView.goBack() }
+            Button("Back") { tab?.goBack() }
                 .keyboardShortcut("[")
-            Button("Forward") { tab?.webView.goForward() }
+            Button("Forward") { tab?.goForward() }
                 .keyboardShortcut("]")
         }
 
@@ -86,9 +88,12 @@ private struct BrowserCommands: Commands {
 
 private struct ExtensionCommands: Commands {
     @ObservedObject private var extensions = Extensions.shared
+    @FocusedObject private var browser: Browser?
 
     var body: some Commands {
         CommandMenu("Extensions") {
+            Button("Manage Extensions") { browser?.show(SakuraPage.extensions.url) }
+                .keyboardShortcut("e", modifiers: [.command, .shift])
             Button("Load Unpacked Extension…") { extensions.chooseUnpackedExtension() }
             if !extensions.contexts.isEmpty {
                 Divider()

@@ -16,6 +16,10 @@ final class Tab: NSObject, ObservableObject, Identifiable {
     @Published private(set) var progress = 0.0
     @Published private(set) var error: String?
     @Published private(set) var favicon: URL?
+    /// A Sakura page shown over the web view (sakura://…); the page under it stays loaded
+    @Published private(set) var page: SakuraPage?
+    /// A sakura:// address that isn't one of our pages
+    @Published private(set) var missingPage: URL?
     private var failedURL: URL?
     private var downloads: [ObjectIdentifier: URL] = [:]
     private var subscriptions: Set<AnyCancellable> = []
@@ -58,9 +62,21 @@ final class Tab: NSObject, ObservableObject, Identifiable {
     }
 
     var displayTitle: String {
+        if let page { return page.title }
         if let title, !title.isEmpty { return title }
         return url?.host() ?? String(localized: "New Tab")
     }
+
+    /// The Sakura page on screen: one that was opened, or the homepage in a tab that has nothing loaded
+    var shownPage: SakuraPage? {
+        page ?? (url == nil && !isLoading ? .homepage : nil)
+    }
+
+    /// What the address bar and "Copy Link" use
+    var address: URL? { page?.url ?? missingPage ?? url }
+
+    var canNavigateBack: Bool { ((page != nil || missingPage != nil) && url != nil) || canGoBack }
+    var canNavigateForward: Bool { canGoForward }
 
     func load(_ input: String) {
         guard let url = Address.url(for: input) else { return }
@@ -69,10 +85,37 @@ final class Tab: NSObject, ObservableObject, Identifiable {
 
     func load(_ url: URL) {
         error = nil
-        webView.load(URLRequest(url: url))
+        if url.scheme?.lowercased() == SakuraPage.scheme {
+            page = SakuraPage(url)
+            missingPage = page == nil ? url : nil
+            return
+        }
+        leaveSakuraPage()
+        if url.isFileURL {
+            // A page from disk may read its own folder (pictures, styles, scripts), nothing else
+            webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
+        } else {
+            webView.load(URLRequest(url: url))
+        }
+    }
+
+    /// Back from a Sakura page returns to the website under it
+    func goBack() {
+        if page != nil || missingPage != nil, url != nil { leaveSakuraPage() } else { webView.goBack() }
+    }
+
+    func goForward() {
+        leaveSakuraPage()
+        webView.goForward()
+    }
+
+    private func leaveSakuraPage() {
+        page = nil
+        missingPage = nil
     }
 
     func reloadOrStop() {
+        guard page == nil, missingPage == nil else { return }
         if isLoading { webView.stopLoading() } else { webView.reload() }
     }
 
@@ -117,6 +160,8 @@ final class Tab: NSObject, ObservableObject, Identifiable {
 extension Tab: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor action: WKNavigationAction) async -> WKNavigationActionPolicy {
         guard let url = action.request.url else { return .cancel }
+        // Sakura's own pages open only from the address bar, never from a website
+        if url.scheme?.lowercased() == SakuraPage.scheme { return .cancel }
         if let scheme = url.scheme?.lowercased(), !Address.webSchemes.contains(scheme) {
             NSWorkspace.shared.open(url)
             return .cancel
